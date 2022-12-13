@@ -40,7 +40,6 @@ int main(void)
 		if (count != 98)
 			printf(", ");
 
-
 		f1_half1 = f2_half1;
 		f1_half2 = f2_half2;
 		f2_half1 = half1;
