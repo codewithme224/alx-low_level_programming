@@ -19,7 +19,7 @@ char *_strcpy(char *dest, char *src)
 		dest[y] = src[x];
 		++y;
 	}
-	dest[b] = '\0';
+	dest[y] = '\0';
 
 	return (dest);
 }
