@@ -12,18 +12,21 @@
 
 char *_strncat(char *dest, char *src, int n)
 {
-	int index, count;
+	int c, i;
 
-	for (index = 0; dest[index] != '\0'; index++)
-		;
-	for (count = 0; count < n && src[count] != '\0'; count++)
-	{
-		dest[index] = src[count];
-		index++;
-	}
-	if (count < n)
-	{
-	dest[index] = '\0';
-	}
+	c = 0;
+
+	while (dest[c])
+		c++;
+
+	/**
+	 * src does not need to be null terminated
+	 * if it contains n or more bytes
+	 */
+	for (i = 0; i < n && src[i] != '\0'; i++)
+		dest[c + i] = src[i];
+	/*null terminated dest*/
+	dest[c + i] = '\0';
+
 	return (dest);
 }
