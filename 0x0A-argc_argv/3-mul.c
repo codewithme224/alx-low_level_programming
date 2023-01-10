@@ -10,14 +10,18 @@
 
 int main(int argc, char *argv[])
 {
-	if (argc <= 2)
+	int index, mul;
+
+	mul = 1;
+	if (argc < 3)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	int a = atoi(argv[1]);
-	int b = atoi(argv[2]);
-	int mul = a * b;
+	for (index = 1; index < argc; index++)
+	{
+		mul = mul * atoi(argv[index]);
+	}
 
 	printf("%d\n", mul);
 	return (0);
