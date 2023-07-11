@@ -28,7 +28,7 @@ void print_array(int *array, size_t low, size_t high)
 
 
 /**
- * binary_search - searches for a value in a sorted array of
+ * b_search - searches for a value in a sorted array of
  *                 integers using the Binary search algorithm
  * @array: pointer to the first element of the array to search in
  * @low: lowest index to search in
@@ -39,7 +39,7 @@ void print_array(int *array, size_t low, size_t high)
  *         present in array or if array is NULL, return -1
  */
 
-int binary_search(int *array, size_t low, size_t high, int value)
+int b_search(int *array, size_t low, size_t high, int value)
 {
 	size_t mid;
 
@@ -100,5 +100,5 @@ int exponential_search(int *array, size_t size, int value)
 		high = size - 1;
 	printf("Value found between indexes [%ld] and [%ld]\n", low, high);
 
-	return (binary_search(array, low, high, value));
+	return (b_search(array, low, high, value));
 }
